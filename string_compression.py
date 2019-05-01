@@ -5,10 +5,10 @@ Case sensitive.
 
 
 def compress(s):
-
-    if len(s) == 0:
+    l = len(s)
+    if l == 0:
         return ''
-    if len(s) == 1:
+    if l == 1:
         return s + '1'
     counter = {}
     for letter in s:
