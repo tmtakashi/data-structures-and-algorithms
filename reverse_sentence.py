@@ -13,11 +13,7 @@ def rev_word(s):
         start += 1
         end -= 1
 
-    reversed_s = ' '
-    for word in words:
-        reversed_s.join(word)
-
-    return reversed_s
+    return ' '.join(words)
 
 
 if __name__ == "__main__":
