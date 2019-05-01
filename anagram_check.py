@@ -1,5 +1,5 @@
 '''
-Create a anagram checker
+Create an anagram checker
 '''
 
 
