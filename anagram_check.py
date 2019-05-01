@@ -1,3 +1,8 @@
+'''
+Create a anagram checker
+'''
+
+
 def anagram(s1, s2):
     s1 = s1.replace(' ', '').lower()
     s2 = s2.replace(' ', '').lower()
