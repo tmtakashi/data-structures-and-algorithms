@@ -7,12 +7,11 @@ class Node(object):
 
 def cycle_check(node):
     first_node = node
-    while True:
+    while node.next != None:
         node = node.next
         if node == first_node:
             return True
-        elif node == None:
-            return False
+    return False
 
 
 if __name__ == "__main__":
