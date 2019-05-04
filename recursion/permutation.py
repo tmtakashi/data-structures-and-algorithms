@@ -9,3 +9,7 @@ def permute(s):
             out += [let + perm]
 
     return out
+
+
+if __name__ == "__main__":
+    print(permute('abcdefg'))
