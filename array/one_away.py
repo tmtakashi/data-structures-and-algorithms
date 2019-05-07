@@ -1,22 +1,38 @@
-def one_away(str1, str2):
-    # zero edits away
-    if str1 == str2:
-        return True
-
-    # find the longer string
-    if len(str1) > len(str2)
-    longer = str1
-    shorter = str2
+def one_edit_away(s1, s2):
+    if len(s1) == len(s2):
+        return one_edit_replace(s1, s2)
+    elif len(s1) + 1 == len(s2):
+        return one_edit_insert(s1, s2)
+    elif len(s1) - 1 == len(s2):
+        return one_edit_insert(s2, s1)
     else:
-        longer = str2
-        shorter = str1
+        return False
 
-    counts = dict()
-    for let in shorter:
-        if let in counts:
-            counts[let] += 1
+
+def one_edit_replace(s1, s2):
+    found_difference = False
+    for range(len(s1)):
+        if s1[i] != s2[i]:
+            if found_difference:
+                return False
+            found_difference = True
+
+    return True
+
+
+def one_edit_insert(s1, s2):
+    '''
+    Check if you can insert a character into s1 to make s2
+    '''
+    index1 = 0
+    index2 = 0
+    while index2 < len(s1) and index1 < len(s1):
+        if s1[index1] != s2[index2]:
+            if index1 != index2:
+                return False
+            index2 += 1
         else:
-            counts[let] = 1
+            index1 += 1
+            index2 += 1
 
-    for let in shorter:
-        if
+    return True
